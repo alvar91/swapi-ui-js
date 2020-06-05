@@ -38,14 +38,26 @@ $("#edit").on("click", function () {
   }
 });
 
+$(".content-wrapper").on("click", function () {
+  if (editPopupSwitcher) {
+    TweenMax.to(editPopup, 1, {
+      x: "-200%",
+      display: "block",
+      width: "60%",
+      height: "0vh",
+      ease: Power3.easeOut,
+    });
+  }
+});
+
 //Preview
 const preview = $(".preview-wrapper");
 const themeSelects = document.querySelectorAll(".theme-select");
 
 const prewiewChild = function () {
-    const nodes = [];
+  const nodes = [];
 
-    const progressLine = $(".progress-line");
+  const progressLine = $(".progress-line");
 
   nodes.push(progressLine[progressLine.length - 1]);
   nodes.push($(".preview-wrapper>a")[0]);
