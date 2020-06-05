@@ -37,3 +37,48 @@ $("#edit").on("click", function () {
     });
   }
 });
+
+//Preview
+const preview = $(".preview-wrapper");
+const themeSelects = document.querySelectorAll(".theme-select");
+
+const prewiewChild = function () {
+    const nodes = [];
+
+    const progressLine = $(".progress-line");
+
+  nodes.push(progressLine[progressLine.length - 1]);
+  nodes.push($(".preview-wrapper>a")[0]);
+  return nodes;
+};
+
+const themePreview = {
+  themeType: "indigo-theme",
+  secondaryColor: "#4ebdd4",
+};
+
+$(".theme-select").on("click", function () {
+  for (const el of themeSelects) {
+    el.classList.remove("selected-theme");
+  }
+  this.classList.add("selected-theme");
+
+  if (this.id === "indigo") {
+    preview[0].classList.value = "preview-wrapper indigo-theme";
+    themePreview.themeType = "indigo-theme";
+  } else {
+    preview[0].classList.value = "preview-wrapper black-theme";
+    themePreview.themeType = "black-theme";
+  }
+});
+
+$(".radio-item>label>span").on("click", function () {
+  prewiewChild().forEach((el) => (el.style.backgroundColor = this.style.color));
+  themePreview.secondaryColor = this.style.color;
+});
+
+$("#save-theme-btn").on("click", function () {
+  theme.themeType = themePreview.themeType;
+  theme.secondaryColor = themePreview.secondaryColor;
+  theme.update();
+});
