@@ -1,6 +1,6 @@
-const navHeaderElem = $("#navbar-header")[0];
+let navHeaderElem = $("#navbar-header")[0];
 
-// Здравствуйте, {имя}, -приветствие-?
+//Здравствуйте, {имя}, -приветствие-?
 
 class NavBarHeader {
   constructor(startStr) {
@@ -20,9 +20,9 @@ class NavBarHeader {
     return this.greetMsg;
   }
   get HeaderHTML() {
-    return `<p>${
-      this.startStr
-    }, <span id="userName" style="font-weight: bold">${this.fio}</span>,
+    return `<p>${this.startStr},<span id="userName" style="font-weight: bold"> ${
+      this.fio
+    }</span>,
         ${
           this.greeting === undefined || this.greeting === ""
             ? "как сегодня настрой?"
@@ -30,9 +30,9 @@ class NavBarHeader {
         }</p>`;
   }
   updateName() {
-    const nameBlocks = $("#userName");
+    let nameBlocks = $("#userName");
 
-    for (const elem of nameBlocks) {
+    for (let elem of nameBlocks) {
       elem.innerText = this.fio;
     }
   }
@@ -41,11 +41,11 @@ class NavBarHeader {
 window.onload = function () {
   let Uname;
 
-  const navheader = new NavBarHeader("Здравствуй");
-  const name = localStorage.getItem("UserName");
+  let navheader = new NavBarHeader("Здравствуй");
+  let name = localStorage.getItem("UserName");
 
   if (name === null) {
-    const newName = prompt("Как к вам обращаться?", "Dude");
+    let newName = prompt("Как к вам обращаться?", "Dude");
     localStorage.setItem("UserName", newName);
   }
 
@@ -55,11 +55,10 @@ window.onload = function () {
   Uname = document.getElementById("userName");
 
   Uname.addEventListener("click", function () {
-    const newName = prompt(
+    let newName = prompt(
       "Как к вам обращаться?",
       localStorage.getItem("UserName")
     );
     navheader.fio = newName;
-    localStorage.setItem("UserName", newName);
   });
 };

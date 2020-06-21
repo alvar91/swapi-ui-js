@@ -1,142 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>STAR WARS DATA VISUALIZATION</title>
     <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">-->
     <link rel="stylesheet" href="css/materialize.css">
     <link rel="stylesheet" href="css/main.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
+
 <body>
 
     <nav>
         <div id="nav" class="nav-wrapper navbar-fixed indigo-theme">
             <ul class="left">
-                <li><a href="index.html">HOME</a></li>
+                <li><a href="">HOME</a></li>
                 <li><a href="data.html" target="_blank">DATA</a></li>
-                <li><a href="search.html">SEARCH</a></li>
             </ul>
-            <a id="edit" class="right btn-floating btn-large pulse" style="background-color:#4ebdd4;margin-top: 5px;margin-right:15px;cursor: pointer">
+            <a id="edit" class="right btn-floating btn-large pulse"
+                style="background-color:#4ebdd4;margin-top: 5px;margin-right:15px;cursor: pointer">
                 <i class="material-icons">edit</i>
             </a>
         </div>
     </nav>
 
-<div class="content-wrapper indigo-theme">
-    <ul class="menu-btn">
-        <li class="first-line" style="background-color: #4ebdd4"></li>
-        <li class="second-line" style="background-color: #4ebdd4"></li>
-        <li class="third-line" style="background-color: #4ebdd4"></li>
-    </ul>
+    <div class="content-wrapper indigo-theme">
+        <ul class="menu-btn">
+            <li class="first-line" style="background-color: #4ebdd4"></li>
+            <li class="second-line" style="background-color: #4ebdd4"></li>
+            <li class="third-line" style="background-color: #4ebdd4"></li>
+        </ul>
 
-    <div class="grey darken-3 menu-wrapper" style="opacity:.5">
+        <div class="grey darken-3 menu-wrapper" style="opacity:.5">
+        </div>
+
+        <div class="home-content_wrapper">
+
+            <div class="greeting_wrapper">
+                <div id="navbar-header"></div>
+            </div>
+
+            <div class="about-block">
+                <h2>About Project</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur at cum dolorum earum eos facere
+                    fuga id, maxime nam nulla, pariatur quae quis quos ratione recusandae sed, sequi ut voluptates.</p>
+            </div>
+
+            <div class="contacts_block" style="display: flex;flex-direction: row;align-items: flex-start">
+                <div class="tabs_container">
+                    <ul>
+                        <li class="tab-link_tab active_tab-link"><span></span>GitHub</li>
+                        <li class="tab-link_tab"><span></span>Email</li>
+                        <li class="tab-link_tab"><span></span>Phone</li>
+                    </ul>
+                </div>
+                <div class="tab-content_wrapper">
+
+                </div>
+
+                <div class="tabs_content_container active_tab-content">
+                    <a href="https://github.com/alvar91" target="_blank">@github/alvar91</a>
+                </div>
+                <div class="tabs_content_container">
+                    <a href="mailto:aleksey91scorp@bk.ru" target="_blank">aleksey91scorp@bk.ru</a>
+                </div>
+                <div class="tabs_content_container">
+                    <a href="skype:skypename?call" target="_blank">aleksey91scorpion</a>
+                </div>
+            </div>
+
+            <div class="skills-sections" style="width: 100%">
+
+            </div>
+
+
+        </div>
     </div>
 
-    <div class="home-content_wrapper">
-
-        <div class="greeting_wrapper">
-            <div id="navbar-header">
-
-            </div>
-        </div>
-
-        <div class="about-block">
-            <h2>About Project</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur at cum dolorum earum eos facere fuga id, maxime nam nulla, pariatur quae quis quos ratione recusandae sed, sequi ut voluptates.</p>
-        </div>
-
-        <div class="contacts_block" style="display: flex;flex-direction: row;align-items: flex-start">
-            <div class="tabs_container">
-                <ul>
-                    <li class="tab-link_tab active_tab-link"><span></span>GitHub</li>
-                    <li class="tab-link_tab"><span></span>Email</li>
-                    <li class="tab-link_tab"><span></span>Phone</li>
-                </ul>
-            </div>
-            <div class="tab-content_wrapper">
-
-            </div>
-        </div>
-
-        <div class="skills-sections" style="width: 100%">
-
-        </div>
-
-
-    </div>
-</div>
-
-<!--edit popup-->
+    <!--edit popup-->
     <div class="edit-popup row" style="transform: translate(-200%, 0%) matrix(1, 0, 0, 1, 0, 0);">
-            <div class="col s12 m12" style="height: 100%;">
-                <div class="card darken-1 z-depth-4 hoverable" style="border-radius: 12px;background-color: #2b2f38;height: 100%;">
-                    <div class="card-content white-text card-content-wrapper" style="height: 85%">
-                        <span class="card-title">Редактирование темы</span>
-                        <div class="row card-text">
-                            <div class="col s5">
-                                <ul>
-                                    <li>
-                                        <p class="caption-text">Тема:</p>
-                                        <div class="theme-selects_wrapper">
-                                            <div class="theme-select indigo-theme selected-theme" id="indigo"></div>
-                                            <div class="theme-select black-theme" id="black"></div>
-                                        </div>
-                                    </li>
-                                    <li style="padding-bottom: 15px">
-                                        <p class="caption-text">Вторичный цвет:</p>
-                                            <p class="radio-item">
-                                                <label>
-                                                    <input name="group1" type="radio" id="blue-radio"/>
-                                                    <span style="color: #00b0ff;font-size: 2em">Blue</span>
-                                                </label>
-                                            </p>
-                                            <p class="radio-item">
-                                                <label>
-                                                    <input name="group1" type="radio" id="orange-radio"/>
-                                                    <span style="color:#ef6230;font-size: 2em">Orange</span>
-                                                </label>
-                                            </p>
-                                            <p class="radio-item">
-                                                <label>
-                                                    <input name="group1" type="radio" id="cyan-radio" checked/>
-                                                    <span style="color:#4ebdd4;font-size: 2em">Cyan</span>
-                                                </label>
-                                            </p>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="col s7" style="padding: 10px;">
-                                <div class="preview-wrapper indigo-theme">
-                                    <div class="progress-wrapper">
-                                        <div class="progress-line" style="background-color: #4ebdd4"></div>
+        <div class="col s12 m12" style="height: 100%;">
+            <div class="card darken-1 z-depth-4 hoverable"
+                style="border-radius: 12px;background-color: #2b2f38;height: 100%;">
+                <div class="card-content white-text card-content-wrapper" style="height: 85%">
+                    <span class="card-title">Редактирование темы</span>
+                    <div class="row card-text">
+                        <div class="col s5">
+                            <ul>
+                                <li>
+                                    <p class="caption-text">Тема:</p>
+                                    <div class="theme-selects_wrapper">
+                                        <div class="theme-select indigo-theme selected-theme" id="indigo"></div>
+                                        <div class="theme-select black-theme" id="black"></div>
                                     </div>
-                                    <a class="right btn-floating btn-large"
-                                       style="background-color:#4ebdd4;margin-top: 5px;margin-right:15px;cursor: pointer">
-                                        <i class="material-icons">edit</i>
-                                    </a>
+                                </li>
+                                <li style="padding-bottom: 15px">
+                                    <p class="caption-text">Вторичный цвет:</p>
+                                    <p class="radio-item">
+                                        <label>
+                                            <input name="group1" type="radio" id="blue-radio" />
+                                            <span style="color: #00b0ff;font-size: 2em">Blue</span>
+                                        </label>
+                                    </p>
+                                    <p class="radio-item">
+                                        <label>
+                                            <input name="group1" type="radio" id="orange-radio" />
+                                            <span style="color:#ef6230;font-size: 2em">Orange</span>
+                                        </label>
+                                    </p>
+                                    <p class="radio-item">
+                                        <label>
+                                            <input name="group1" type="radio" id="cyan-radio" checked />
+                                            <span style="color:#4ebdd4;font-size: 2em">Cyan</span>
+                                        </label>
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col s7" style="padding: 10px;">
+                            <div class="preview-wrapper indigo-theme">
+                                <div class="progress-wrapper">
+                                    <div class="progress-line" style="background-color: #4ebdd4"></div>
                                 </div>
+                                <a class="right btn-floating btn-large"
+                                    style="background-color:#4ebdd4;margin-top: 5px;margin-right:15px;cursor: pointer">
+                                    <i class="material-icons">edit</i>
+                                </a>
                             </div>
                         </div>
                     </div>
-                    <div class="card-action center">
-                        <a class="waves-effect waves-light waves-purple btn" id="save-theme-btn" style="background-color: #00b0ff;">Сохранить изменения</a>
-                    </div>
                 </div>
+                <div class="card-action center">
+                    <a class="waves-effect waves-light waves-purple btn" id="save-theme-btn"
+                        style="background-color: #00b0ff;">Сохранить изменения</a>
+                </div>
+            </div>
         </div>
     </div>
 
 
-<div data-include="footer"></div>
-<!-- Compiled and minified JavaScript -->
-<script src="js/jquery.min.js"></script>
-<script src="js/materialize.js"></script>
-<script src="js/TweenMax.min.js"></script>
+    <div data-include="footer"></div>
+    <!-- Compiled and minified JavaScript -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/materialize.js"></script>
+    <script src="js/TweenMax.min.js"></script>
     <script src="js/header.js"></script>
     <script type="module" src="js/main.js"></script>
-<script src="js/tabs.js"></script>
-<script src="js/progresses.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="js/tabs.js"></script>
+    <script src="js/progresses.js"></script>
+    <!--<script src="js/progresses.js"></script>-->
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>-->
 </body>
+
 </html>

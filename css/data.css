@@ -1,16 +1,18 @@
-.data-page_container{
+.data-page_container {
     width: 100%;
     height: 95vh;
     color: whitesmoke;
     padding: 20px 20px 0 20px;
 }
-.personages_container{
+
+.personages_container {
     display: flex;
     flex-direction: row;
     overflow: hidden;
     height: 100%;
 }
-.personage-item_container{
+
+.personage-item_container {
     color: #303030;
     background-color: white;
     min-height: 200px;
@@ -18,17 +20,20 @@
     cursor: pointer;
     padding: 10px;
 }
-.personage-item_container:not(:last-child){
+
+.personage-item_container:not(:last-child) {
     margin-right: 20px;
 }
-.data-page-main-content{
+
+.data-page-main-content {
     height: 75vh;
     overflow: hidden;
     border: 1px solid ghostwhite;
-    padding:0 15px;
+    padding: 0 15px;
     border-radius: 6px;
 }
-.arrow{
+
+.arrow {
     width: 30px;
     height: 30px;
     border: 1px solid ghostwhite;
@@ -36,6 +41,7 @@
     text-align: center;
     cursor: pointer;
 }
-.arrow:hover{
+
+.arrow:hover {
     background-color: rgba(255, 255, 255, 0.09);
 }
